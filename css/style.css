@@ -1,0 +1,889 @@
+@font-face{
+	font-family: 'Gotham-Medium';
+	src: url('../fonts/Gotham-Medium.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face{
+	font-family: 'Gotham Bold';
+	src: url('../fonts/Gotham Bold.otf') format('otf');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face{
+	font-family: 'Gotham Book Regular';
+	src: url('../fonts/Gotham Book Regular.otf') format('otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face{
+	font-family: 'Myriad Pro Regular';
+	src: url('../fonts/Myriad Pro Regular.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+:root{
+	font-size: 14px;
+}
+*, *::before, *::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+html {
+	overflow-x: hidden;
+}
+body{
+	background: #222222;
+	overflow-x: hidden;
+}
+header{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: transparent;
+	width: 100%;
+	height: 115px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-bottom: 1px solid #7b7b7b;
+	font-family: "Myriad Pro Regular",sans-serif;
+}
+nav{
+	display: flex;
+	justify-content: center;
+  align-items: center;
+}
+ul{
+	display: flex;
+}
+li{
+	display: flex;
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+}
+.header-container{
+	width: 90vw;
+	margin: 0 auto;
+	display: grid;
+	grid-gap: .5vw;
+	align-items: center;
+	grid-template-columns: 1fr minmax(54.28vw,1fr) 1fr;
+}
+
+.header-container .main-menu a{
+	color: #fff;
+	font-weight: bold;
+	font-size: 1.142em;
+	margin-left: 3.571vw;
+
+}
+.logo{
+	margin-left: 0.5vw;
+}
+.logo img{
+	width: 5.34vmax; 
+	height: 5.05vmax;
+}
+.main-menu ul{
+	margin: 0;
+	padding: 0;
+}
+.main-menu a{
+	padding: 0 0 47px;
+	margin-top: 47px;
+	border-bottom: 3px solid transparent; 
+}
+.main-menu a:hover{
+	border-bottom: 3px solid #11749e;
+	color: #11749e;
+
+}
+#menu-checkbox{
+display: none;
+}
+.social{
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-left: 1vmax;
+padding-left: 1vw;
+padding-right: 1vw;
+}
+.social a{
+	padding: 0 1vw 48px;
+	margin-top: 48px;
+	border-bottom: 3px solid transparent; 
+	color: #fff;
+	font-weight: bold;
+	font-size: 1em;
+	
+}
+.social a:hover{
+	border-bottom: 3px solid #11749e;
+	color: #11749e;
+}
+.social ul{
+	margin: 0;
+	padding: 0;
+}
+
+#head{
+	background: url(../img/bg-head.png) no-repeat;
+	background-position-y: 0%;
+	background-size: cover;
+	width: 100vw;
+	height: 100vh;
+	padding-top: 115px;
+	margin: 0 auto;
+}
+
+.inner-head-title{
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-content: center;
+	align-items: center;
+}
+.title{
+	text-align: center;
+	margin-top: 19.07vh;
+}
+.title h1{
+font-family: 'Gotham Bold',sans-serif;
+font-weight: bold;
+font-style: normal;
+font-size: 8vmax;
+text-transform: uppercase;
+color: #fff;
+	}
+	.title p{
+padding-left: 1vmax;
+font-family: 'Gotham-Medium',sans-serif;
+font-weight: normal;
+font-style: normal;
+font-size: 1.285em;
+text-transform: uppercase;
+color: #11749e;
+letter-spacing: .9vmax;
+	}
+	.title a{
+		color: #11749e;
+	}
+.scroll{
+	text-align: center;
+	margin-top: 8.64vh;
+	color: #fff;
+	font-family:"Myriad Pro Regular",sans-serif;
+}
+.scroll a:hover{
+	opacity: 0.2;
+}
+#agency{
+	background: #11749e;
+	color: #fff;
+}
+.inner-agency{
+	width: 90%;
+	margin: 0 auto;
+	padding-bottom: 9.42vmax;
+}
+.inner-agency .letters .text-top h2{
+text-transform: uppercase;
+font-size: 2vmax;
+font-family: 'Gotham-Medium',sans-serif;
+font-weight: bold;
+font-style: normal;
+color: #fff;
+}
+.letters{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.inner-agency .letters .we-are{
+	text-align: center;
+	opacity: 0.25;
+	background: transparent;
+	position: relative;
+}
+.we-are{
+	text-align: center;
+	color: #d7d7d7;
+	opacity: 0.6;
+	background: transparent;
+	position: relative;
+}
+.we-are h1{
+  font-family: 'Roboto Condensed', sans-serif;
+	font-size: 12.57vmax;
+	font-weight: bold;
+	font-style: normal;
+}
+.letter{
+	text-transform: uppercase;
+}
+.text-top{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	left: 0;
+	width: 100vw;
+}
+.features{
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+	grid-gap:1vmax;
+}
+.feature{
+	text-align: center;
+}
+.circle{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	width: 9.5vmax;
+	height: 9.5vmax;
+	background: #2e85aa;
+	border-radius: 4.75vmax;
+}
+.icon{
+	font-size: 2.5vmax;
+}
+.text-icon{
+	text-align: center;
+}
+.feature .text-icon h3{
+	text-transform: uppercase;
+	font-family: 'Gotham-Medium', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	padding: 2vmax 1vmax;
+}
+.feature .text-icon p{
+	font-family: 'Gotham Book Regular', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 1.2vmax;
+	text-align: justify;
+}
+
+#akita{
+	width: 100vw;
+	color: #fff;
+}
+.akita-wrap{
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	grid-gap: 0;
+	justify-content: flex-start;
+}
+.akita-culture{
+	padding: 5vmax 7.35vmax 7.35vmax 5vmax;
+}
+.akita-culture h3{
+	text-transform: uppercase;
+	font-family: 'Gotham-Medium', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 2vmax;
+}
+.akita-culture p{
+	font-family: 'Gotham Book Regular', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 1.285vmax;
+}
+.akita-culture .data{
+	font-size: 0.8vmax;
+}
+.akita-img{
+	display: grid;
+	grid-template-columns: 1fr;
+}
+.akita-img img{
+	width: 50vw;
+}
+.light{
+	background: #f3f3f3;
+	color: #222;
+}
+
+#blog{
+	width: 100vw;
+	margin: 0 auto;
+	text-align: center;
+	background: #fff;
+}
+.inner-blog h2{
+	text-transform: uppercase;
+  font-size: 2vmax;
+  font-family: 'Gotham-Medium',sans-serif;
+  color: #222;
+}
+.text{
+	text-align: center;
+}
+.inner-blog .text p{
+	padding-bottom: 2vmax;
+	font-family: 'Gotham Book Regular', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 1.285vmax;
+	color: #222;
+}
+.cards{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 3vmax;
+}
+.cards h3{
+	padding: 2vmax 0;
+	margin: 0;
+	font-family: 'Gotham-Medium', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 2vmax;
+	color: #11749e;
+	text-transform: uppercase;
+}
+.cards p{
+	font-family: 'Gotham Book Regular', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 1.285vmax;
+	color: #222;
+  text-align: justify;
+}
+.inner-cards{
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	grid-template-columns: repeat(4,270px);
+	grid-gap: 3.5vmax;
+}
+.card-fresh{
+	text-align: center;
+}
+.inner-card-fresh{
+	width: 270px;
+	height: auto;
+}
+.card-fesh .inner-card-fresh img{
+	width: 19.285vmax;
+	height: 20vmax;
+}
+.blue{
+	width: 100vw;
+	height: 25.285vh;
+	background: #11749e;
+	color: #fff;
+	display: grid;
+	justify-content: space-around;
+	grid-template-columns: repeat(2,40vw);
+	grid-gap: 1vmax;
+}
+.blue i{
+	font-size: 6vmax;
+	padding: .5vmax;
+}
+.blue-pen{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.text-pen  p{
+	font-family: 'Gotham Book Regular', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 1.285vmax;
+  text-align: justify;
+}
+#phone{
+	background: url(../img/bg-akita.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #fff;
+}
+.phone-container{
+	display: grid;
+	justify-content: center;
+	grid-template-columns: 1fr 1fr;
+}
+.text-phone{
+	text-align: left;
+	padding: 5.14vmax;
+}
+.text-phone h3{
+  text-transform: uppercase;
+	font-family: 'Gotham-Medium', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 2vmax;
+}
+.text-phone h4{
+	text-transform: uppercase;
+	font-family: 'Gotham-Medium', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 1.2vmax;
+	padding: .8vmax;
+	margin: 1vmax 1vmax 1vmax 0;
+	background: #11749e;
+}
+.text-phone p{
+	font-family: 'Gotham Book Regular', sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 1.285vmax;
+}
+.img-phone{
+	margin-top: 3.5vmax;
+	margin-left: 6vmax;
+}
+#team{
+	background: #fff;
+	padding-bottom: 9vmax;
+}
+.teame-container{
+	display: grid;
+	justify-content: center;
+	grid-template-columns: 1fr;
+}
+.text-top h2{
+	text-transform: uppercase;
+  font-size: 2vmax;
+  font-family: 'Gotham-Medium',sans-serif;
+  font-weight: bold;
+  color: #222;
+  padding-right: .6vmax;
+  letter-spacing: .2vmax;
+}
+.text p{
+font-family: 'Gotham Book Regular',sans-serif;
+font-weight: normal;
+font-style: normal;
+font-size: 1.28vmax;
+color: #222;
+}
+.card-photo{
+width: 19.285vmax;
+height: 29.642vmax;
+}
+.cards-team{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.inner-cards-team{
+	display: grid;
+	justify-content: center;
+	grid-template-columns: repeat(4,1fr);
+	grid-gap: 4vmax;
+}
+.one{
+	background: url(../img/team1.png);
+	background-position: center;
+	background-size: cover;
+}
+.two{
+	background: url(../img/team2.png);
+	background-position: center;
+	background-size: cover;
+}
+.three{
+	background: url(../img/team3.png);
+	background-position: center;
+	background-size: cover;
+}
+.four{
+	background: url(../img/team4t.png);
+	background-position: center;
+	background-size: cover;	
+}
+.name{
+	text-align: center;
+	background: #fff;
+	width: 15.571vmax;
+	margin: 0 auto;
+	position: relative;
+	top: 27.857vmax;
+}
+.name h3{
+	color: #11749e;
+	text-transform: uppercase;
+	font-size: 1.5vmax;
+  font-family: 'Gotham-Medium',sans-serif;
+  font-weight: bold;
+}
+.name p{
+	color: #222;
+	font-size: 1vmax;
+  font-family: 'Gotham Book Regular',sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+#submit{
+	background: url(../img/bg-about.png);
+	background-position: center;
+	background-size: cover;
+}
+.submit-container .letters .text-top h2{
+	color: #fff;
+	text-align: center;
+}
+.forms{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50vw;
+	margin: 0 auto;
+	padding-bottom: 5vmax;
+}
+.inner-forms{
+	display: grid;
+	justify-content: center;
+	grid-template-columns: repeat(3,1fr);
+	grid-gap: 1vmax;
+}
+.message{
+	display: grid;
+	justify-content: center;
+	grid-template-columns: 1fr;
+	align-items: center;
+}
+.inner-forms div input{
+background: none;
+color: #fff;
+border: 1px solid #fff;
+padding: 1vmax 2vmax;
+}
+.btn{
+background: #11749e;
+color: #fff;
+padding: 1vmax 1vmax;
+font-size: 2vmax;
+width: 15vw;
+margin: 0 auto;
+cursor: pointer;
+}
+.message textarea{
+background: none;
+color: #fff;
+border: 1px solid #fff;
+}
+.map{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+footer{
+	width: 100vw;
+	color: #fff;
+}
+footer h5{
+  font-size: 1.2vmax;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+footer a{
+	color: #fff;
+}
+footer a:hover{
+color: #fdb83e;
+}
+.footer-container{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	padding: 2vmax 5vmax;
+}
+.bee img{
+	margin-bottom: -.5vmax;
+}
+
+@media screen and (min-width: 1600px){
+	.map{
+	padding-bottom: 2vmax;
+}
+}
+
+
+@media screen and (max-width: 1024px) {
+
+.inner-cards{
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	grid-template-columns: repeat(2,1fr);
+	grid-gap: 10vmax;
+}
+
+.inner-cards-team{
+	display: grid;
+	justify-content: center;
+	grid-template-columns: repeat(2,1fr);
+	grid-gap: 10vmax;
+}
+}
+
+@media screen and (max-width: 968px) {
+	.header-container{
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+	.logo{
+		padding-left: 4vmax;
+	}
+	.main-menu{
+		display: none;
+	}
+	.main-menu li{
+		width: 100%;
+		display: block;
+	}
+	.main-menu a{
+		display: block;
+		padding: 0.5vmax;
+		margin: 0;
+	  border-bottom: 3px solid transparent; 
+	  font-size: .8vmax;
+	}
+	.toggle-button{
+		text-align: center;
+		display: block;
+		cursor: pointer;
+		color: #fff;
+	}
+	.toggle-button:after{
+		content: attr(data-open);
+		display: block;
+	}
+	#menu-checkbox:checked + nav[role="navigation"] .main-menu{
+		display: block;
+	}
+		#menu-checkbox:checked + nav[role="navigation"] .toggle-button:after{
+			display: block;
+			content: attr(data-close);
+		}
+
+.header-container .center-menu a{
+    background: #111;
+    opacity: 0.6;
+
+}
+.main-menu{
+	margin: 0;
+	padding: 0;
+	position: relative;
+	top: 35px;
+	color: #fff;
+ }
+.features{
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	grid-gap:1vmax;
+}
+.cards p{
+	font-size: 2vmax;
+}
+.text-pen  p{
+	font-size: 2vmax;
+}
+.akita-wrap{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 0vmax;
+	justify-content: center;
+}
+.akita-culture h3{
+	font-size: 3vmax;
+}
+.akita-culture p{
+	font-size: 2vmax;
+}
+.akita-culture .data{
+	font-size: 1.4vmax;
+}
+.akita-img img{
+	width: 100vw;
+}
+
+.inner-blog .text p{
+font-size: 2vmax;
+}
+.inner-cards{
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	grid-template-columns: repeat(2,1fr);
+	grid-gap: 9.5vmax;
+}
+.blue{
+	width: 100vw;
+	height: auto;
+	display: grid;
+	justify-content: space-around;
+	grid-template-columns: 85vw;
+}
+.blue-pen{
+	padding: 2vh 3vw 1vh;
+}
+.text-phone h3{
+	font-size: 3vmax;
+}
+.text-phone h4{
+	font-size: 1.4vmax;
+}
+.text-phone p{
+	font-size: 2vmax;
+}
+.img-phone{
+	margin-top: 3.5vmax;
+	margin-left: 4vmax;
+}
+.text-top h2{
+  font-size: 3vmax;
+}
+.card-photo{
+width: 19.285vmax;
+height: 29.642vmax;
+}
+.team-container .text p{
+	font-size: 2vmax;
+}
+.cards-team{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.card-photo .name p{
+	font-size: 1.5vmax;
+}
+}
+
+@media screen and (max-width: 768px) {
+	.features{
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	grid-template-columns: 1fr;
+	grid-gap:2vmax;
+}
+.feature .text-icon p {
+    font-family: 'Gotham Book Regular', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.2vmax;
+    text-align: center;
+}
+.akita-culture{
+text-align: center;
+}
+.akita-culture .data{
+	text-align: center;
+}
+.akita-culture p{
+text-align: justify;
+}
+.inner-agency .letters .text-top h2{
+font-size: 3vmax;
+}
+.inner-blog h2{
+  font-size: 3vmax;
+}
+.blue i{
+	padding-right: 3vmax;
+}
+}
+
+
+@media screen and (max-width: 480px){
+
+	.inner-agency .letters .text-top h2{
+		font-size: 2.7vmax;
+		letter-spacing: 0.1vmax;
+	}
+	.feature .text-icon h3{
+		font-size: 3vmax;
+	}
+	.feature .text-icon p{
+	font-size: 2vmax;
+	text-align: center;
+}
+	.inner-cards{
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	grid-template-columns: 1fr;
+	grid-gap: 2.5vmax;
+}
+.blue{
+	padding: 2vmax 3vmax 2vmax;
+	height: auto;
+	display: grid;
+	justify-content: space-around;
+	grid-template-columns: 1fr;
+	grid-gap: 1vmax;
+}
+.blue i{
+	padding-right: .8vmax;
+}
+.phone-container{
+	display: grid;
+	justify-content: center;
+	grid-template-columns: 1fr;
+}
+.text-phone{
+	text-align: center;
+	padding: 5.14vmax;
+}
+.img-phone{
+	margin: 0 auto;
+}
+.img-phone img{
+	width: 33vmax;
+	height: 66.5vmax;
+}
+.forms{
+	width: 40vw;
+	margin: 0 auto;
+	padding-bottom: 5vmax;
+}
+.inner-forms{
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	grid-template-columns: 1fr;
+	grid-gap: 1vmax;
+}
+.btn{
+padding: 2vmax 3vmax;
+font-size: 3vmax;
+width: 40vw;
+}
+
+.map img{
+	width: 114.285vmax;
+	height: 23.714vmax;
+}
+footer h5{
+  font-size: 2vmax;
+  padding-bottom: 3vmax;
+}
+.footer-container{
+	padding: 2vmax 3vmax;
+}
+}
